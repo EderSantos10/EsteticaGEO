@@ -47,8 +47,6 @@ com.esteticadageo
 ├── config → Configurações globais (ex: exceções)
 
 yaml
-Copiar
-Editar
 
 ---
 
@@ -70,9 +68,6 @@ spring:
     password: <SENHA>
 Compile e execute:
 
-bash
-Copiar
-Editar
 ./gradlew bootRun
 Acesse:
 
@@ -101,6 +96,15 @@ Agendamento de serviço	/web/agendamentos/novo
 
 🔒 Segurança
 Este projeto é para fins educacionais. Algumas simplificações foram feitas:
+
+🔧 Criação de Profissional
+Atenção: a criação de profissionais está disponível somente via API REST (Postman).
+Por uma decisão de arquitetura e segurança, apenas perfis administradores poderiam realizar esse cadastro.
+Como este projeto está em fase de estudos, a interface web para esse recurso ainda não foi implementada.
+
+E a seção dos endpoints REST também é atualizada com esse lembrete:
+
+POST /api/profissionais   ← apenas via Postman (sem página web)
 
 As senhas estão em texto puro (por enquanto)
 
