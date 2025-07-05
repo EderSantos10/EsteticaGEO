@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Login</title>
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
+</head>
+<body>
+<div class="container">
+    <h2>Registrar Login e Senha</h2>
+
+    <div th:if="${erro}" style="color: red; margin-bottom: 15px;">
+        <p th:text="${erro}"></p>
+    </div>
+
+    <form th:action="@{/web/logins}" method="post" th:object="${loginForm}">
+        <label>ID do Cliente:</label>
+        <input type="number" th:field="*{clienteId}" required />
+
+        <label>Login:</label>
+        <input type="text" th:field="*{login}" maxlength="15" required />
+
+        <label>Senha:</label>
+        <input type="password" th:field="*{senha}" maxlength="8" required />
+
+        <label>Confirmar Senha:</label>
+        <input type="password" th:field="*{confirmarSenha}" maxlength="8" required />
+
+        <button type="submit">Registrar</button>
+    </form>
+
+    <a href="/web/login"><button>Voltar ao Login</button></a>
+</div>
+</body>
+</html>
