@@ -78,7 +78,7 @@ http://localhost:8080
 📬 Endpoints REST disponíveis (via Postman)
 POST /api/clientes
 
-POST /api/profissionais
+POST /api/profissionais   ← apenas via Postman (sem página web)
 
 POST /api/logins/{clienteId}
 
@@ -101,10 +101,6 @@ Este projeto é para fins educacionais. Algumas simplificações foram feitas:
 Atenção: a criação de profissionais está disponível somente via API REST (Postman).
 Por uma decisão de arquitetura e segurança, apenas perfis administradores poderiam realizar esse cadastro.
 Como este projeto está em fase de estudos, a interface web para esse recurso ainda não foi implementada.
-
-E a seção dos endpoints REST também é atualizada com esse lembrete:
-
-POST /api/profissionais   ← apenas via Postman (sem página web)
 
 As senhas estão em texto puro (por enquanto)
 
